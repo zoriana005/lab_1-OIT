@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Відгук — Food House</title>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Головна</a>
+        <a href="news.html">Новини</a>
+        <a href="contacts.html">Контакти</a>
+        <a href="feedback.html">Відгук</a>
+        <a href="login.html">Авторизація</a>
+    </nav>
+
+    <h1>Форма зворотного зв’язку</h1>
+
+    <form action="/submit_feedback" method="post">
+        <label for="name">Ім'я:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Електронна пошта:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="age">Вік:</label><br>
+        <input type="number" id="age" name="age" min="1" max="120"><br><br>
+
+        <label for="message">Повідомлення:</label><br>
+        <textarea id="message" name="message" rows="5" cols="40" placeholder="Ваш відгук..."></textarea><br><br>
+
+        <label for="favorite_dish">Улюблена страва:</label><br>
+        <select id="favorite_dish" name="favorite_dish">
+            <option value="sushi" selected>Суші бургер з лососем</option>
+            <option value="pepperoni">Піца пепероні</option>
+            <option value="four_cheese">Піца 4 сири</option>
+            <option value="fries">Картопля фрі</option>
+            <option value="udon">Удон з куркою та овочами</option>
+        </select><br><br>
+
+        <p>Як часто відвідуєте наш ресторан?</p>
+        <input type="radio" id="often" name="visit_frequency" value="often">
+        <label for="often">Часто</label><br>
+        <input type="radio" id="sometimes" name="visit_frequency" value="sometimes">
+        <label for="sometimes">Іноді</label><br>
+        <input type="radio" id="rarely" name="visit_frequency" value="rarely">
+        <label for="rarely">Рідко</label><br><br>
+
+        <p>Що вам подобається у нас? (можна вибрати кілька варіантів)</p>
+        <input type="checkbox" id="taste" name="likes" value="taste">
+        <label for="taste">Смак страв</label><br>
+        <input type="checkbox" id="service" name="likes" value="service">
+        <label for="service">Обслуговування</label><br>
+        <input type="checkbox" id="interior" name="likes" value="interior">
+        <label for="interior">Інтер'єр</label><br><br>
+
+        <button type="submit">Відправити</button>
+        <button type="reset">Очистити</button>
+    </form>
+</body>
+
+</html>
